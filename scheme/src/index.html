@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Scheme</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      opacity: 1;
+    }
+
+    #tableId {
+      font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    #tableId td, #tableId th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+
+    #tableId tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    #tableId tr:hover {
+      background-color: #ddd;
+    }
+
+    #tableId th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #04AA6D;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <app-root></app-root>
+  <div>
+    <div>
+      <canvas id="canvas" width="500" height="500" style="border: 1px solid blue;"></canvas>
+    </div>
+    <div style="width: 500px; height: 500px; margin: -500px 0 0 510px; /*padding: 15px;*/">
+      <canvas id="chart" width="500" height="500"></canvas>
+    </div>
+  </div>
+  <div style="width: 1010px;">
+    <table id="tableId">
+      <thead>
+        <th>Speed</th>
+        <th>Pressure</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>100</td>
+          <td>50</td>
+        </tr>
+        <tr>
+          <td>110</td>
+          <td>60</td>
+        </tr>
+        <tr>
+          <td>105</td>
+          <td>40</td>
+        </tr>
+        <tr>
+          <td>95</td>
+          <td>55</td>
+        </tr>
+        <tr>
+          <td>100</td>
+          <td>45</td>
+        </tr>
+        <tr>
+          <td>90</td>
+          <td>50</td>
+        </tr>
+        <tr>
+          <td>105</td>
+          <td>60</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div style="display:none;">
+    <img id="devices" src="./assets/vendors/device.jpg" width="140" height="20">
+    <img id="tubes" src="./assets/vendors/tube.jpg" width="140" height="20">
+  </div>
+
+  <div id="dialog" class="modal">
+    <div
+      style="background-color: #fefefe; margin: 8% 0 0 200px; padding: 15px; border-radius: 15px; border: 2px solid #4b9b29; width: 130px; height: 35px;">
+      <span class="close">&times;</span>
+      <div>
+        <span>Speed: 100 rpm/s</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.js"></script>
+  <script src="./assets/vendors/device.js"></script>
+  <script src="./assets/vendors/tube.js"></script>
+  <script src="./assets/vendors/scheme.js"></script>
+</body>
+
+</html>
